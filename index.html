@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#2d5a5e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+<title>Persahabatan di Hutan Rimba</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Definisi bentuk flora yang dipakai ulang -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="lf" viewBox="0 0 100 100"><path d="M4 96C-2 40 40 0 96 4C102 62 60 102 4 96Z" fill="currentColor"/><path d="M4 96L78 22M30 70L28 44M48 52L50 28M30 70L56 70M48 52L74 50" stroke="#0004" stroke-width="2" fill="none"/></symbol>
+  <symbol id="spk" viewBox="0 0 56 200"><path d="M28 200C20 150 8 130 0 110C14 112 20 106 22 92C14 90 8 80 4 66C16 68 22 62 24 50C20 38 22 20 28 0C34 20 36 38 32 50C34 62 40 68 52 66C48 80 42 90 34 92C36 106 42 112 56 110C48 130 36 150 28 200Z" fill="currentColor"/></symbol>
+  <symbol id="an" viewBox="0 0 80 90"><path d="M40 86C-12 62 -2 4 40 26C82 4 92 62 40 86Z" fill="#f26f5a"/><path d="M40 80C40 60 40 44 40 30M40 66L20 48M40 66L60 48" stroke="#d9503c" stroke-width="2" fill="none"/><path d="M40 68C42 52 52 32 68 16" stroke="#f7c948" stroke-width="6" fill="none" stroke-linecap="round"/></symbol>
+  <symbol id="st" viewBox="0 0 40 40"><path d="M20 1L25 14L39 13L28 22L33 37L20 29L7 37L12 22L1 13L15 14Z" fill="#fbeaa6"/><circle cx="20" cy="20" r="4" fill="#f7c948"/></symbol>
+  <g id="tree" fill="#2d5a5e">
+    <path d="M0 0H122C100 90 84 160 100 250C116 330 84 430 95 540C100 610 90 650 96 682H0Z"/>
+    <path d="M95 300C150 250 200 205 322 150L332 172C222 218 160 274 110 344Z"/>
+    <path d="M96 430C140 405 185 380 235 325" stroke="#2d5a5e" stroke-width="12" fill="none"/>
+    <circle cx="40" cy="40" r="78"/><circle cx="175" cy="30" r="56"/><circle cx="272" cy="64" r="46"/><circle cx="336" cy="150" r="38"/><circle cx="240" cy="318" r="30"/>
+    <path d="M34 0V682" stroke="#1f4a4f" stroke-width="12" opacity=".45"/>
+  </g>
+</defs></svg>
+
+<!-- LATAR HUTAN (berlapis agar terasa lebih nyata) -->
+<div class="scene" aria-hidden="true">
+  <svg class="layer" viewBox="0 0 1024 682" preserveAspectRatio="xMidYMid slice">
+    <g fill="#a9e4cd" opacity=".75">
+      <path d="M250 0C270 150 330 230 300 380L290 682H350L360 380C390 220 330 130 335 0Z"/>
+      <path d="M640 0C650 120 730 200 700 330L710 682H780L760 330C790 200 710 110 720 0Z"/>
+      <path d="M100 420C180 270 320 300 350 430C290 420 190 450 100 420Z"/>
+      <path d="M700 460C760 320 900 330 960 450C880 440 790 470 700 460Z"/>
+      <path d="M430 330C470 240 560 250 590 330C540 322 480 345 430 330Z"/>
+    </g>
+    <g fill="none" stroke="#6fcaad" stroke-width="3" opacity=".8">
+      <path d="M-10 90C200 200 400 40 620 120S900 60 1040 140"/>
+      <path d="M-10 190C220 120 420 220 640 190S920 170 1040 70"/>
+    </g>
+  </svg>
+  <div class="rays"></div>
+  <svg class="layer" viewBox="0 0 1024 682" preserveAspectRatio="xMidYMid slice">
+    <g fill="#62c6a8">
+      <path d="M470 0C480 140 540 230 520 360L525 682H590L582 360C612 230 540 130 560 0Z"/>
+      <path d="M130 0C150 120 210 220 190 340L185 682H240L246 340C270 210 200 110 215 0Z"/>
+      <path d="M850 0C860 130 930 210 910 330L915 682H965L960 330C985 210 920 120 930 0Z"/>
+    </g>
+    <g class="sway" color="#4db398">
+      <use href="#spk" x="330" y="360" width="60" height="230" transform="rotate(-30 360 590)"/>
+      <use href="#spk" x="360" y="340" width="60" height="250" transform="rotate(-8 390 590)"/>
+      <use href="#spk" x="640" y="360" width="60" height="230" transform="rotate(26 670 590)"/>
+      <use href="#spk" x="610" y="340" width="60" height="250" transform="rotate(6 640 590)"/>
+    </g>
+    <g color="#3fa88e">
+      <use href="#lf" x="80" y="400" width="130" height="130" transform="rotate(-25 145 465)"/>
+      <use href="#lf" x="820" y="410" width="140" height="140" transform="rotate(70 890 480)"/>
+      <use href="#lf" x="470" y="470" width="120" height="120" transform="rotate(-80 530 530)"/>
+    </g>
+    <g color="#4cb597"><use href="#lf" x="300" y="95" width="30" height="30" transform="rotate(40 315 110)"/><use href="#lf" x="560" y="100" width="34" height="34" transform="rotate(120 577 117)"/><use href="#lf" x="800" y="105" width="28" height="28" transform="rotate(-30 814 119)"/></g>
+  </svg>
+
+  <!-- pohon gelap kiri & kanan -->
+  <svg class="edge l" viewBox="0 0 360 682" preserveAspectRatio="xMinYMid slice">
+    <use href="#tree"/>
+    <g class="snake">
+      <path d="M118 284C150 236 172 272 202 226S252 192 282 172C302 152 322 172 334 176" fill="none" stroke="#f5b942" stroke-width="13" stroke-linecap="round"/>
+      <path d="M118 284C150 236 172 272 202 226S252 192 282 172C302 152 322 172 334 176" fill="none" stroke="#e08a2b" stroke-width="6" stroke-linecap="round" stroke-dasharray="3 15"/>
+      <ellipse cx="338" cy="177" rx="11" ry="7" fill="#f5b942"/><circle cx="340" cy="175" r="2" fill="#2d2d33"/><path d="M348 178l10 2" stroke="#e2573f" stroke-width="2"/>
+    </g>
+  </svg>
+  <svg class="edge r" viewBox="0 0 360 682" preserveAspectRatio="xMinYMid slice"><use href="#tree"/></svg>
+
+  <div class="mist"></div>
+
+  <!-- tanaman dan hewan di depan -->
+  <svg class="front fl" viewBox="0 0 420 300">
+    <g class="sway" color="#2d7f6f">
+      <use href="#spk" x="60" y="90" width="56" height="210" transform="rotate(-42 88 300)"/>
+      <use href="#spk" x="70" y="70" width="56" height="230" transform="rotate(-18 98 300)"/>
+      <use href="#spk" x="110" y="90" width="56" height="210" transform="rotate(14 138 300)"/>
+    </g>
+    <!-- kelinci -->
+    <g>
+      <ellipse cx="205" cy="246" rx="44" ry="40" fill="#d9dbe2"/><ellipse cx="195" cy="262" rx="26" ry="18" fill="#eef0f4"/>
+      <circle cx="160" cy="258" r="13" fill="#fff"/>
+      <ellipse cx="238" cy="150" rx="9" ry="30" fill="#d9dbe2" transform="rotate(-10 238 150)"/><ellipse cx="238" cy="152" rx="4.5" ry="22" fill="#f3a9b8" transform="rotate(-10 238 150)"/>
+      <ellipse cx="262" cy="152" rx="9" ry="30" fill="#d9dbe2" transform="rotate(12 262 152)"/><ellipse cx="262" cy="154" rx="4.5" ry="22" fill="#f3a9b8" transform="rotate(12 262 152)"/>
+      <circle cx="248" cy="198" r="28" fill="#e6e8ee"/>
+      <circle cx="259" cy="195" r="4" fill="#2d2d33"/><circle cx="260" cy="194" r="1.3" fill="#fff"/>
+      <ellipse cx="274" cy="205" rx="4.5" ry="3.5" fill="#f08aa0"/><path d="M270 211q5 5 10-1" stroke="#7a5a63" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <circle cx="241" cy="209" r="5" fill="#f9c2cc" opacity=".7"/>
+    </g>
+    <g class="sway" color="#1f4a4f">
+      <use href="#lf" x="-30" y="150" width="190" height="190" transform="rotate(-20 65 245)"/>
+      <use href="#lf" x="150" y="230" width="150" height="130" transform="rotate(-70 225 295)"/>
+    </g>
+    <use href="#an" x="14" y="205" width="68" height="78"/>
+    <use href="#st" x="96" y="262" width="34" height="34"/><use href="#st" x="64" y="282" width="26" height="26"/>
+  </svg>
+
+  <svg class="front fr" viewBox="0 0 420 300">
+    <g class="sway" color="#2d7f6f">
+      <use href="#spk" x="300" y="80" width="56" height="220" transform="rotate(40 328 300)"/>
+      <use href="#spk" x="290" y="60" width="56" height="240" transform="rotate(16 318 300)"/>
+    </g>
+    <!-- flamingo -->
+    <g>
+      <path d="M312 215V300M324 215L334 300" stroke="#f08a75" stroke-width="4"/>
+      <ellipse cx="320" cy="196" rx="52" ry="26" fill="#f4907c"/>
+      <path d="M285 196C305 170 345 176 370 200C345 216 305 218 285 196Z" fill="#e8705b"/>
+      <path d="M372 192C395 188 405 204 412 218C392 218 376 212 368 202Z" fill="#e8705b"/>
+      <path d="M278 186C242 182 246 132 272 122C288 112 282 92 274 82" fill="none" stroke="#f4907c" stroke-width="12" stroke-linecap="round"/>
+      <circle cx="274" cy="80" r="11" fill="#f4907c"/><path d="M280 74L306 84L288 93Z" fill="#fff"/><path d="M298 81L306 84L297 89Z" fill="#2d2d33"/><circle cx="276" cy="77" r="2.2" fill="#2d2d33"/>
+    </g>
+    <!-- kura-kura -->
+    <g>
+      <ellipse cx="82" cy="268" rx="15" ry="10" fill="#6fb34f"/><ellipse cx="150" cy="268" rx="15" ry="10" fill="#6fb34f"/>
+      <path d="M44 270C44 205 168 205 176 270Z" fill="#c98a3a"/>
+      <path d="M80 252L92 230H130L142 252Z M92 230L100 214M130 230L122 214M80 252L66 262M142 252L158 262" fill="none" stroke="#8a5a22" stroke-width="3" stroke-linejoin="round"/>
+      <rect x="42" y="266" width="136" height="9" rx="4" fill="#5fa043"/>
+      <circle cx="194" cy="250" r="17" fill="#7cc35a"/><circle cx="201" cy="246" r="3" fill="#2d2d33"/><path d="M196 257q7 5 13-2" stroke="#2d5a3a" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </g>
+    <g class="sway" color="#1f4a4f">
+      <use href="#lf" x="250" y="170" width="200" height="200" transform="rotate(75 350 270)"/>
+      <use href="#lf" x="180" y="240" width="130" height="110" transform="rotate(-100 245 295)"/>
+    </g>
+    <use href="#an" x="340" y="214" width="72" height="82"/>
+    <use href="#st" x="288" y="266" width="34" height="34"/><use href="#st" x="250" y="280" width="26" height="26"/>
+  </svg>
+</div>
+
+<main>
+<!-- HALAMAN 1: UTAMA -->
+<section id="home" class="page active">
+  <button class="back" data-back>◀ Kembali</button>
+  <div class="wrap center">
+    <div class="sign"><h1>Persahabatan di Hutan Rimba</h1></div>
+    <p class="lead">Belajar fabel bersama Kelinci, Kura-kura, Rusa, dan Gajah. Pelajari materinya, lalu uji pemahamanmu lewat kuis.</p>
+    <div class="actions">
+      <button class="btn" data-go="materi">📖 Mulai Belajar</button>
+      <button class="btn alt" data-go="kuis">🏆 Langsung ke Kuis</button>
+    </div>
+  </div>
+</section>
+
+<!-- HALAMAN 2: MATERI -->
+<section id="materi" class="page">
+  <button class="back" data-back>◀ Kembali</button>
+  <div class="wrap">
+    <div class="card">
+      <div class="slides">
+        <article class="slide active">
+          <div class="ico">📜</div><h2>Pengertian Fabel</h2>
+          <p>Fabel adalah cerita rekaan yang tokohnya hewan (kadang tumbuhan atau benda) yang bersikap dan berbicara seperti manusia. Fabel selalu membawa pesan moral untuk pembacanya.</p>
+          <p class="ex"><b>Contoh:</b> Kelinci, Kura-kura, Rusa, dan Gajah dapat berbicara dan bekerja sama membersihkan sungai.</p>
+        </article>
+        <article class="slide">
+          <div class="ico">🐰🐢</div><h2>Pengertian Tokoh</h2>
+          <p>Tokoh adalah pelaku yang mengalami kejadian dalam cerita. Tokoh utama paling sering muncul dan menjadi pusat cerita, sedangkan tokoh tambahan membantu menggerakkan cerita.</p>
+          <p class="ex"><b>Contoh:</b> Kelinci dan Kura-kura adalah tokoh utama. Rusa dan Gajah adalah tokoh tambahan.</p>
+        </article>
+        <article class="slide">
+          <div class="ico">💛</div><h2>Pengertian Watak</h2>
+          <p>Watak (penokohan) adalah sifat atau karakter tokoh. Watak dapat kita kenali dari ucapan, perbuatan, dan penjelasan pengarang.</p>
+          <p class="ex"><b>Contoh:</b> Kelinci awalnya sombong, Kura-kura sabar dan bijaksana, Rusa pandai menengahi, Gajah suka menolong.</p>
+        </article>
+        <article class="slide">
+          <div class="ico">⚡</div><h2>Pengertian Konflik</h2>
+          <p>Konflik adalah masalah atau pertentangan yang dialami tokoh. Konflik membuat cerita menjadi hidup dan menuntun cerita menuju penyelesaian.</p>
+          <p class="ex"><b>Contoh:</b> Kelinci meremehkan Kura-kura karena berjalan lambat, sehingga keduanya berbeda pendapat.</p>
+        </article>
+        <article class="slide">
+          <div class="ico">💡</div><h2>Pengertian Amanat</h2>
+          <p>Amanat adalah pesan moral yang ingin disampaikan pengarang kepada pembaca, biasanya berupa nasihat tentang sikap yang baik.</p>
+          <p class="ex"><b>Contoh:</b> Jangan meremehkan orang lain. Setiap makhluk punya kelebihan, dan pekerjaan sulit menjadi ringan jika dilakukan bersama.</p>
+        </article>
+      </div>
+      <p class="count" id="count"></p>
+      <div class="dots" id="dots"></div>
+      <div class="ctrl">
+        <button class="btn small" id="prev">◀ Sebelumnya</button>
+        <button class="btn small sun" id="next">Selanjutnya ▶</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HALAMAN 3: KUIS -->
+<section id="kuis" class="page">
+  <button class="back" data-back>◀ Kembali</button>
+  <div class="wrap"><div class="card"><div id="quiz"></div></div></div>
+</section>
+</main>
+<div id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
